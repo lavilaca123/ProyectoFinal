@@ -26,3 +26,4 @@ class Categorias : AppCompatActivity() {
         startActivity(intent)
     }
 }
+//
