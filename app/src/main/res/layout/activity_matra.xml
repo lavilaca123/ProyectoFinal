@@ -71,8 +71,6 @@
             android:background="@drawable/customborder"
             android:orientation="vertical">
 
-
-
             <Button
                 android:id="@+id/btn_Moviles"
                 android:layout_width="400dp"
