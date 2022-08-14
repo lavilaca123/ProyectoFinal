@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fidelitasLogo" />
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        app:srcCompat="@drawable/fidelitas1" />
 
     <TextView
         android:id="@+id/texto"
