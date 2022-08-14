@@ -53,7 +53,7 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="429dp"
-            android:layout_height="217dp"
+            android:layout_height="182dp"
             app:srcCompat="@drawable/fidelitas" />
 
         <TextView
@@ -67,7 +67,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="92dp"
+            android:layout_height="114dp"
             android:background="@drawable/customborder"
             android:orientation="vertical">
 
@@ -75,11 +75,11 @@
                 android:id="@+id/btn_Moviles"
                 android:layout_width="400dp"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@color/purple_700"
                 android:text="Dispositivos Moviles"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#673AB7"
+                app:backgroundTint="@color/purple_700"
                 app:iconTint="@color/yellow" />
 
             <TextView
@@ -98,7 +98,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="95dp"
+            android:layout_height="106dp"
             android:background="@drawable/customborder"
             android:orientation="vertical">
 
@@ -127,17 +127,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="125dp"
             android:background="@drawable/customborder"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_Base"
                 android:layout_width="391dp"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:background="#c0c0c0"
-                app:backgroundTint="@color/purple_700"
-                android:text="Base de Datos" />
+                android:text="Base de Datos"
+                app:backgroundTint="@color/purple_700" />
 
             <TextView
                 android:id="@+id/textView5"
