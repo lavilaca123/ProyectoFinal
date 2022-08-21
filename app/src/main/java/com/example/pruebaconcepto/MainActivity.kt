@@ -18,82 +18,52 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
 
-//
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Inicializacion de variables
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
 
-        binding.btnIngresar.setOnClickListener(){
-            haceLogin()
-        }
-
-        binding.btnRegistrar.setOnClickListener(){
-            haceRegister()
-        }
+        binding.btnRegistrar.setOnClickListener { haceLogin() }
 
     }
 
-    private fun haceRegister() {
-        val email= binding.etCorreo.text.toString()
-        val clave = binding.etClave.text.toString()
 
-        auth.createUserWithEmailAndPassword(email,clave).
-        addOnCompleteListener(this){ task->
-            if(task.isSuccessful){
-                Log.d("Creando usuario","Registrado")
-                val user=auth.currentUser
-                actualiza(user)
-            }else{
-                Log.d("Creando usuario","Fallo")
-                Toast.makeText(baseContext,"Fallo", Toast.LENGTH_LONG).show()
-                actualiza(null)
-            }
-
-        }
-    }
-
+    //Autenticacion de logueo con firebase
     private fun haceLogin() {
-        val email= binding.etCorreo.text.toString()
-        val clave = binding.etClave.text.toString()
+        val email = binding.txtCorreo.text.toString()
+        val clave = binding.txtPassword.text.toString()
 
-        if(email!="" && clave!="" ){
-            auth.signInWithEmailAndPassword(email,clave).
-            addOnCompleteListener(this){ task->
-                if(task.isSuccessful){
-                    Log.d("Autenticando","Auntenticado")
-                    val user=auth.currentUser
+        //Se usa la función para crear un usuario por medio de correo y contraseña
+        auth.signInWithEmailAndPassword(email,clave)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
                     actualiza(user)
-                }else{
-                    Log.d("Autenticando","Fallo")
-                    Toast.makeText(baseContext,"Fallo", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(baseContext,
+                        getString(R.string.msg_fallo_login),
+                        Toast.LENGTH_SHORT).show()
                     actualiza(null)
                 }
-
             }
-        }else{
-            Log.d("Autenticando","Faltan las Credenciales")
-            Toast.makeText(baseContext,"Fallo", Toast.LENGTH_LONG).show()
-        }
-
-
     }
 
     private fun actualiza(user: FirebaseUser?) {
-        if(user!=null){
+        if (user!=null) {
+            // paso a la pantalla principal
             val intent = Intent(this,Matra::class.java)
             startActivity(intent)
         }
-
     }
 
-    //Esto hara que una vez auntenticado...
-    public override fun onStart(){
+    public override fun onStart() {
         super.onStart()
-        val usuario= auth.currentUser
-        actualiza(usuario)
+        val user = auth.currentUser
+        actualiza(user)
     }
 }
