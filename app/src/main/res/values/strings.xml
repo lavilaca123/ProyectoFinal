@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Universidad Fidelitas</string>
     <string name="msg_bt_ingresar">Ingresar</string>
-    <string name="title_activity_misiony_valores">Categorias de Maquinaria</string>
     <string name="msg_fallo_login">Falló la autenticación del usuario</string>
     <string name="title_activity_principal">Principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

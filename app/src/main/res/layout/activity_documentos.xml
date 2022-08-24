@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Documentos">
+
+<TextView
+android:id="@+id/textView24"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="20dp"
+android:text="Presentación curso.pdf"
+android:textSize="24sp"
+app:layout_constraintStart_toEndOf="@+id/imageView49"
+app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+<TextView
+android:id="@+id/textView25"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="22dp"
+android:text="Lineamientos curso.docx"
+android:textSize="24sp"
+app:layout_constraintStart_toEndOf="@+id/imageView50"
+app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+<TextView
+android:id="@+id/textView26"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="22dp"
+android:text="Documentos"
+android:textSize="24sp"
+app:layout_constraintStart_toEndOf="@+id/imageView51"
+app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+<LinearLayout
+android:id="@+id/linearLayout3"
+android:layout_width="404dp"
+android:layout_height="276dp"
+android:orientation="vertical"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent">
+
+<TextView
+    android:id="@+id/textView9"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#372BC6"
+    android:text="Campus Virtual"
+    android:textAlignment="center"
+    android:textColor="#FFFFFF"
+    android:textSize="34sp" />
+
+<ImageView
+    android:id="@+id/imageView5"
+    android:layout_width="429dp"
+    android:layout_height="182dp"
+    app:srcCompat="@drawable/fidelitas" />
+
+<TextView
+    android:id="@+id/textView12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="0dp"
+    android:text="Archivos"
+    android:textAlignment="center"
+    android:textSize="34sp"
+    android:textStyle="bold" />
+</LinearLayout>
+
+<ImageView
+android:id="@+id/imageView49"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="24dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+app:srcCompat="@drawable/pdf" />
+
+<ImageView
+android:id="@+id/imageView50"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="32dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/imageView49"
+app:srcCompat="@drawable/word" />
+
+<ImageView
+android:id="@+id/imageView51"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="32dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/imageView50"
+app:srcCompat="@drawable/folder" />
+
+<ImageView
+android:id="@+id/imageView53"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="28dp"
+android:layout_marginEnd="40dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+app:srcCompat="@drawable/search" />
+
+<ImageView
+android:id="@+id/imageView54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="32dp"
+android:layout_marginEnd="40dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/imageView53"
+app:srcCompat="@drawable/search" />
+
+<ImageView
+android:id="@+id/imageView55"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="28dp"
+android:layout_marginEnd="40dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/imageView54"
+app:srcCompat="@drawable/search" />
+
+<ImageView
+android:id="@+id/imageView56"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="28dp"
+android:layout_marginEnd="8dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+app:srcCompat="@drawable/download" />
+
+<ImageView
+android:id="@+id/imageView57"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="32dp"
+android:layout_marginEnd="8dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/imageView56"
+app:srcCompat="@drawable/download" />
+
+<ImageView
+android:id="@+id/imageView58"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="28dp"
+android:layout_marginEnd="8dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/imageView57"
+app:srcCompat="@drawable/download" />
+
+<View
+android:id="@+id/divider6"
+android:layout_width="409dp"
+android:layout_height="1dp"
+android:layout_marginTop="32dp"
+android:background="?android:attr/listDivider"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+<Button
+android:id="@+id/btnBack"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="32dp"
+android:text="Regresar"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/divider6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

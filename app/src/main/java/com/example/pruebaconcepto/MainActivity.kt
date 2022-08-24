@@ -3,7 +3,6 @@ package com.example.pruebaconcepto
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.pruebaconcepto.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseApp
@@ -33,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     //Autenticacion de logueo con firebase
     private fun haceLogin() {
         val email = binding.txtCorreo.text.toString()
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     private fun actualiza(user: FirebaseUser?) {
         if (user!=null) {
             // paso a la pantalla principal
-            val intent = Intent(this,Matra::class.java)
+            val intent = Intent(this,Cursos::class.java)
             startActivity(intent)
         }
     }

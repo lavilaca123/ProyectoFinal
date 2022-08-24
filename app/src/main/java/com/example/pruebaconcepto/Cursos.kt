@@ -3,21 +3,29 @@ package com.example.pruebaconcepto
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.pruebaconcepto.databinding.ActivityMatraBinding
+import com.example.pruebaconcepto.databinding.ActivityCursosBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class Matra : AppCompatActivity() {
+class Cursos : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMatraBinding
+    private lateinit var binding: ActivityCursosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMatraBinding.inflate(layoutInflater)
+        binding = ActivityCursosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnCategorias.setOnClickListener(){
-            verCategorias()
+        binding.btnMoviles.setOnClickListener(){
+            verSemanas()
+        }
+
+        binding.btnSistemas.setOnClickListener(){
+            verSemanas()
+        }
+
+        binding.btnBase.setOnClickListener(){
+            verSemanas()
         }
 
         binding.btnVolver.setOnClickListener(){
@@ -26,8 +34,8 @@ class Matra : AppCompatActivity() {
     }
 
 
-    private fun verCategorias() {
-        val intent = Intent(this,Categorias::class.java)
+    private fun verSemanas() {
+        val intent = Intent(this,Semanas::class.java)
         startActivity(intent)
     }
 
